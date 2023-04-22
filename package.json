@@ -108,7 +108,7 @@
   },
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "build": "parcel build src/index.html --public-url /goit-js-hw-09/"
   },
   "repository": {
     "type": "git",
@@ -120,6 +120,6 @@
   "bugs": {
     "url": "https://github.com/Yulia097/goit-js-hw-09/issues"
   },
-  "homepage": "https://github.com/Yulia097/goit-js-hw-09#readme",
+  "homepage": "https://yulia097.github.io/goit-js-hw-09/",
   "description": ""
 }
