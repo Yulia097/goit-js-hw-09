@@ -4,7 +4,7 @@
   },
   "name": "goit-js-hw-09",
   "version": "1.0.0",
-  "main": "./src/index.html",
+  "main": "",
   "dependencies": {
     "abortcontroller-polyfill": "^1.7.5",
     "acorn": "^8.8.2",
