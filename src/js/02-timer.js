@@ -1,5 +1,6 @@
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
+import Notiflix from 'notiflix';
 
 const text = document.querySelector('#datetime-picker');
 const timerHtml = document.querySelector('.timer');
@@ -18,7 +19,7 @@ const options = {
   minuteIncrement: 1,
   onClose(selectedDates) {
     if (selectedDates[0] < new Date()) {
-      window.alert('Please choose a date in the future');
+      Notiflix.Notify.failure('Please choose a date in the future');
       btnStart.disabled = true;
     } else {
       btnStart.disabled = false;
@@ -61,6 +62,12 @@ btnStart.addEventListener('click', () => {
       hours.textContent = addLeadingZero(timeObject.hours);
       minutes.textContent = addLeadingZero(timeObject.minutes);
       seconds.textContent = addLeadingZero(timeObject.seconds);
+      if (countdown <= 10000) {
+        timerHtml.style.color = 'tomato';
+      }
+    } else {
+      Notiflix.Notify.success('Countdown finished');
+      timerHtml.style.color = 'black';
       clearInterval(timer);
     }
   }, 1000);
